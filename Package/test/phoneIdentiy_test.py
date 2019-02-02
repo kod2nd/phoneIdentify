@@ -31,3 +31,5 @@ def test_getPhoneNumbers():
     assert getPhoneNumbers("hello 65 8176 1924") == ["+6581761924"]
     # Word and numbers seperated by dashes
     assert getPhoneNumbers("hello 65-81761-924") == ["+6581761924"]
+    # No Phone number
+    # assert getPhoneNumbers("hello $1,234") == []
