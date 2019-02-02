@@ -18,16 +18,16 @@ def test_formatPhoneNumber():
     assert formatPhoneNumber("1234") == "+1234"
 
 
-def test_getMobileNumbers():
-    # Basic Singapore Mobile Number
-    assert getMobileNumbers("+6581761924") == ["+6581761924"]
+def test_getPhoneNumbers():
+    # Basic Singapore Phone Number
+    assert getPhoneNumbers("+6581761924") == ["+6581761924"]
     # Word infront of number
-    assert getMobileNumbers("hello +6581761924") == ["+6581761924"]
+    assert getPhoneNumbers("hello +6581761924") == ["+6581761924"]
     # Same Numbers
-    assert getMobileNumbers("+6581761924 +6581761924") == ["+6581761924"]
+    assert getPhoneNumbers("+6581761924 +6581761924") == ["+6581761924"]
     # Word and no + in front
-    assert getMobileNumbers("hello 6581761924") == ["+6581761924"]
+    assert getPhoneNumbers("hello 6581761924") == ["+6581761924"]
     # Word and numbers seperated by spaces
-    assert getMobileNumbers("hello 65 8176 1924") == ["+6581761924"]
+    assert getPhoneNumbers("hello 65 8176 1924") == ["+6581761924"]
     # Word and numbers seperated by dashes
-    assert getMobileNumbers("hello 65-81761-924") == ["+6581761924"]
+    assert getPhoneNumbers("hello 65-81761-924") == ["+6581761924"]

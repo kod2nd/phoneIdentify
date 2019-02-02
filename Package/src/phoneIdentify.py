@@ -20,7 +20,7 @@ def formatPhoneNumber(phoneNumber):
     return phoneNumber
 
 
-def getMobileNumbers(text):
+def getPhoneNumbers(text):
     phoneNumsRaw = [group[0] for group in regex.findall(phoneRegex, text)]
 
     phoneNumsProcessed = [removeSpacesDashes(
