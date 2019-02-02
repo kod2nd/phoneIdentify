@@ -9,6 +9,14 @@ def test_removeDuplicates():
     assert removeDuplicates(['a', 'a']) == ['a']
     assert removeDuplicates(['b', 'a']) == ['b', 'a']
 
+def test_removeSpacesDashes():
+    assert removeSpacesDashes("hello abc") == "helloabc"
+    assert removeSpacesDashes("hello-abc") == "helloabc"
+    assert removeSpacesDashes(" hello-abc ") == "helloabc"
+
+def test_formatPhoneNumber():
+    assert formatPhoneNumber("1234") == "+1234"
+
 
 def test_getMobileNumbers():
     # Basic Singapore Mobile Number
