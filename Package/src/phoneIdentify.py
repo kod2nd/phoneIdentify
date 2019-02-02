@@ -1,7 +1,7 @@
 import re as regex
 from more_itertools import unique_everseen
 
-mobileRegex = r'((\+[0-9]+\s*)?(\([0-9]+\))?([\s0-9\-]+[0-9]+))'
+phoneRegex = r'((\+[0-9]+\s*)?(\([0-9]+\))?([\s0-9\-]+[0-9]+))'
 
 
 def removeDuplicates(lst):
@@ -21,12 +21,12 @@ def formatPhoneNumber(phoneNumber):
 
 
 def getMobileNumbers(text):
-    mobileNumsRaw = [group[0] for group in regex.findall(mobileRegex, text)]
+    phoneNumsRaw = [group[0] for group in regex.findall(phoneRegex, text)]
 
-    mobileNumsProcessed = [removeSpacesDashes(
-        number) for number in mobileNumsRaw]
+    phoneNumsProcessed = [removeSpacesDashes(
+        number) for number in phoneNumsRaw]
 
-    mobileNumsFormatted = [formatPhoneNumber(
-        number) for number in mobileNumsProcessed]
+    phoneNumsFormatted = [formatPhoneNumber(
+        number) for number in phoneNumsProcessed]
 
-    return removeDuplicates(mobileNumsFormatted)
+    return removeDuplicates(phoneNumsFormatted)
