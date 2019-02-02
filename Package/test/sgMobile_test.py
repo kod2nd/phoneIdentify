@@ -10,7 +10,7 @@ def test_removeDuplicates():
     assert removeDuplicates(['b', 'a']) == ['b', 'a']
 
 
-def test_joinedNumber():
+def test_getMobileNumbers():
     # Basic Singapore Mobile Number
     assert getMobileNumbers("+6581761924") == ["+6581761924"]
     # Word infront of number
@@ -21,3 +21,5 @@ def test_joinedNumber():
     assert getMobileNumbers("hello 6581761924") == ["+6581761924"]
     # Word and numbers seperated by spaces
     assert getMobileNumbers("hello 65 8176 1924") == ["+6581761924"]
+    # Word and numbers seperated by dashes
+    assert getMobileNumbers("hello 65-81761-924") == ["+6581761924"]

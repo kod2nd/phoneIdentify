@@ -8,8 +8,10 @@ def removeDuplicates(lst):
     return list(unique_everseen(lst))
 
 
-def removeSpaces(string):
-    return string.replace(" ", "")
+def removeSpacesDashes(string):
+    stringNoSpaces = string.replace(" ", "")
+    stringNoDashes = stringNoSpaces.replace("-", "")
+    return stringNoDashes
 
 
 def formatPhoneNumber(phoneNumber):
@@ -21,7 +23,8 @@ def formatPhoneNumber(phoneNumber):
 def getMobileNumbers(text):
     mobileNumsRaw = [group[0] for group in regex.findall(mobileRegex, text)]
 
-    mobileNumsProcessed = [removeSpaces(number) for number in mobileNumsRaw]
+    mobileNumsProcessed = [removeSpacesDashes(
+        number) for number in mobileNumsRaw]
 
     mobileNumsFormatted = [formatPhoneNumber(
         number) for number in mobileNumsProcessed]
