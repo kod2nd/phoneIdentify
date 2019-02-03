@@ -1,5 +1,5 @@
-# Regex Phone Number Identifier
-Using regex to identify phone numbers in a string of text
+# Regex Identifiers
+Using regex to identify phone numbers and credit card numbers in a string of text
 
 ## Usage
 ```Package/src/phoneIdentify.py```
